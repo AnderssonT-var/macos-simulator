@@ -4,6 +4,13 @@ Recreación de un escritorio de macOS en el navegador, hecha con React.
 
 **Demo en vivo:** [enfoco.media](https://enfoco.media)
 
+
+## Capturas
+
+**Escritorio con el Centro de notificaciones y el calendario abiertos**
+
+![Escritorio con el Centro de notificaciones y el calendario abiertos](docs/capturas/escritorio.jpg)
+
 ## Funciones
 
 - Pantalla de arranque y escritorio con iconos
