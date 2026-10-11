@@ -1,0 +1,37 @@
+.desktopIcon {
+
+  position:absolute;
+
+  width:70px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+
+  cursor:default;
+  user-select:none;
+
+  color:white;
+  font-size:12px;
+  text-align:center;
+}
+
+.desktopIcon img {
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+.desktopIcon span {
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.desktopIcon:hover span {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.desktopIcon--dragging {
+  opacity: 0.85;
+}

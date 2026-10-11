@@ -1,0 +1,75 @@
+.wallpapers {
+  padding: 24px;
+  color: white;
+}
+
+.wallpapers__top {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.wallpapers__preview {
+  width: 260px;
+  height: 160px;
+  border-radius: 12px;
+  background: #111;
+  overflow: hidden;
+}
+
+.wallpapers__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wallpapers__empty {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+.wallpapers__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wallpapers__controls button {
+  background: #2c2c2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.wallpapers__controls button.danger {
+  background: #3a1c1c;
+  color: #ff6b6b;
+}
+
+.wallpapers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.wallpaperItem {
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.wallpaperItem img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.wallpaperItem.active {
+  border-color: #0a84ff;
+}

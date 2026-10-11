@@ -1,0 +1,91 @@
+.appleAccount {
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  color: #eaeaea;
+  overflow-y: auto;
+}
+
+/* HEADER */
+.appleAccount__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.appleAccount__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.appleAccount__header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.appleAccount__header p {
+  font-size: 13px;
+  color: #9a9a9a;
+  margin-top: 4px;
+}
+
+/* CARDS */
+.appleAccount__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.appleCard {
+  background: #2a2a2c;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.appleCard__item {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  cursor: default;
+}
+
+.appleCard__item:last-child {
+  border-bottom: none;
+}
+
+.appleCard__item:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.appleCard__apple {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* DEVICES */
+.appleAccount__devices h3 {
+  font-size: 14px;
+  color: #9a9a9a;
+  margin-bottom: 10px;
+}
+
+.appleDevice {
+  background: #2a2a2c;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+}
+
+.appleDevice strong {
+  display: block;
+  font-size: 14px;
+}
+
+.appleDevice span {
+  font-size: 12px;
+  color: #9a9a9a;
+}

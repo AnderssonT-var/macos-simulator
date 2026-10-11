@@ -1,0 +1,28 @@
+.menuPopover {
+  position: absolute;
+  top: 36px;
+  right: 10px;
+
+  background: rgba(28, 28, 28, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 14px;
+  padding: 12px;
+  min-width: 260px;
+
+  animation: menu-pop 180ms cubic-bezier(.2,.8,.2,1);
+  box-shadow: 0 30px 60px rgba(0,0,0,.55);
+  z-index: 9999;
+}
+
+@keyframes menu-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,51 @@
+.folderApp {
+  display: flex;
+  height: 100%;
+  color: #fff;
+}
+
+/* Sidebar */
+.folderApp__sidebar {
+  width: 220px;
+  background: rgba(0, 0, 0, 0.35);
+  border-right: 1px solid rgba(255,255,255,0.15);
+  padding: 12px;
+}
+
+.folderApp__section {
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  cursor: default;
+  opacity: 0.85;
+}
+
+.folderApp__section.active,
+.folderApp__section:hover {
+  background: rgba(255,255,255,0.15);
+  opacity: 1;
+}
+
+/* Content */
+.folderApp__content {
+  flex: 1;
+  padding: 20px;
+}
+
+.folderApp__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.folderApp__card {
+  height: 120px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.15);
+}

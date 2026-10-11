@@ -1,0 +1,64 @@
+.folder {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: 100%;
+  color: #fff;
+}
+
+/* ───── SIDEBAR ───── */
+.folder__sidebar {
+  background: rgba(0, 0, 0, 0.35);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 14px 0;
+}
+
+.folder__menuItem {
+  width: 100%;
+  padding: 14px 18px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.folder__menuItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ───── CONTENT ───── */
+.folder__content {
+  padding: 24px;
+}
+
+.folder__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 22px;
+}
+
+.folder__card {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.folder__card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.folder__icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.folder__title {
+  font-size: 14px;
+  font-weight: 600;
+}

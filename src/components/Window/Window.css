@@ -1,0 +1,291 @@
+/* ───────── BASE WINDOW ───────── */
+
+.window{
+  position:absolute;
+  top:0;
+  left:0;
+
+  border-radius:12px;
+
+  overflow:hidden;
+
+  pointer-events:auto;
+
+  user-select:none;
+
+  opacity:1;
+
+  transition:
+    opacity .16s ease,
+    transform .16s ease;
+
+  will-change:transform, opacity;
+}
+
+/* Activa */
+
+.window--active{
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.45),
+    0 0 0 1px rgba(255,255,255,.08) inset;
+}
+
+/* Inactiva */
+
+.window--inactive{
+  opacity:.9;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.25);
+}
+
+
+/* ───────── MINIMIZED ───────── */
+
+.window--minimized{
+
+  opacity:0;
+
+  transform:translateY(30px) scale(.95);
+
+  pointer-events:none;
+
+}
+
+
+/* ───────── FRAME ───────── */
+
+.window__frame{
+
+  width:100%;
+  height:100%;
+
+  display:flex;
+  flex-direction:column;
+
+  background:rgba(28,28,30,.96);
+
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+
+}
+
+
+/* ───────── MAXIMIZED ───────── */
+
+.window--maximized{
+  border-radius:0;
+}
+
+
+/* ───────── TITLE BAR ───────── */
+
+.window__titlebar{
+
+  height:36px;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 12px;
+
+  gap:10px;
+
+  background:rgba(38,38,40,.92);
+
+  border-bottom:1px solid rgba(255,255,255,.06);
+
+  cursor:default;
+}
+
+
+/* ───────── TRAFFIC LIGHTS ───────── */
+
+.window__traffic{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.window__dotBtn{
+
+  width:14px;
+  height:14px;
+
+  border-radius:50%;
+
+  border:none;
+
+  padding:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:default;
+
+  transition:
+    transform .12s ease,
+    filter .12s ease;
+
+}
+
+.window__dotBtn svg{
+
+  width:9px;
+  height:9px;
+
+  opacity:0;
+
+  color:rgba(0,0,0,.65);
+
+}
+
+.window__titlebar:hover .window__dotBtn svg{
+  opacity:1;
+}
+
+.window__dotBtn:hover{
+  filter:brightness(1.1);
+}
+
+.window__dotBtn:active{
+  transform:scale(.9);
+}
+
+
+/* Colores macOS */
+
+.window__dotBtn--red{background:#ff5f57;}
+.window__dotBtn--yellow{background:#febc2e;}
+.window__dotBtn--green{background:#28c840;}
+
+
+/* ───────── TITLE ───────── */
+
+.window__title{
+
+  position:absolute;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  font-size:13px;
+
+  font-weight:500;
+
+  color:rgba(255,255,255,.75);
+
+  pointer-events:none;
+
+  white-space:nowrap;
+
+}
+
+.window__spacer{
+  flex:1;
+}
+
+
+/* ───────── CONTENT ───────── */
+
+.window__content{
+
+  flex:1;
+
+  overflow:hidden;
+
+  background:rgba(24,24,26,.95);
+
+}
+
+
+/* ───────── SCROLLBAR ───────── */
+
+.window__content::-webkit-scrollbar{
+  width:8px;
+}
+
+.window__content::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+.window__content::-webkit-scrollbar-thumb{
+
+  background:rgba(255,255,255,.25);
+
+  border-radius:10px;
+
+}
+
+
+/* ───────── RESIZE HANDLES ───────── */
+
+.resize{
+  position:absolute;
+  z-index:50;
+}
+
+.resize.right{
+  right:0;
+  top:0;
+  width:6px;
+  height:100%;
+  cursor:e-resize;
+}
+
+.resize.left{
+  left:0;
+  top:0;
+  width:6px;
+  height:100%;
+  cursor:w-resize;
+}
+
+.resize.bottom{
+  bottom:0;
+  left:0;
+  width:100%;
+  height:6px;
+  cursor:s-resize;
+}
+
+.resize.top{
+  top:0;
+  left:0;
+  width:100%;
+  height:6px;
+  cursor:n-resize;
+}
+
+.resize.bottom-right{
+  right:0;
+  bottom:0;
+  width:12px;
+  height:12px;
+  cursor:se-resize;
+}
+
+.resize.bottom-left{
+  left:0;
+  bottom:0;
+  width:12px;
+  height:12px;
+  cursor:sw-resize;
+}
+
+.resize.top-right{
+  right:0;
+  top:0;
+  width:12px;
+  height:12px;
+  cursor:ne-resize;
+}
+
+.resize.top-left{
+  left:0;
+  top:0;
+  width:12px;
+  height:12px;
+  cursor:nw-resize;
+}

@@ -1,0 +1,130 @@
+.batteryPanel {
+  width: 280px;
+  padding: 14px;
+
+  background: rgba(40, 40, 42, 0.9);
+  backdrop-filter: blur(22px);
+  border-radius: 18px;
+
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+/* HEADER */
+.batteryPanel__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* ROWS */
+.batteryPanel__row {
+  font-size: 13px;
+  padding: 6px 0;
+}
+
+.batteryPanel__row.muted {
+  opacity: 0.7;
+}
+
+/* DIVIDER */
+.batteryPanel__divider {
+  height: 1px;
+  background: rgba(255,255,255,0.12);
+  margin: 8px 0;
+}
+
+/* SECTION */
+.batteryPanel__section {
+  padding: 6px 0;
+}
+
+/* MODE */
+.batteryPanel__mode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.batteryPanel__modeIcon {
+  width: 22px;
+  height: 14px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  position: relative;
+}
+
+.batteryPanel__modeIcon::after {
+  content: "";
+  position: absolute;
+  right: -4px;
+  top: 3px;
+  width: 3px;
+  height: 8px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 2px;
+}
+
+/* LINK */
+.batteryPanel__link {
+  font-size: 13px;
+  color: #0a84ff;
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+.batteryPanel__link:hover {
+  text-decoration: underline;
+}
+
+/* STATUS */
+.batteryPanel__status {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* SWITCH */
+.switch {
+  margin-left: auto;
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #3a3a3c;
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  top: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.switch input:checked + .slider {
+  background: #0a84ff;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(16px);
+}

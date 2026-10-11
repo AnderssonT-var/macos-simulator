@@ -1,0 +1,285 @@
+.controlCenter {
+  width: 320px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  background: rgba(40,40,42,0.85);
+  backdrop-filter: blur(30px);
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+}
+
+/* GRID TOGGLES */
+.cc__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cc__tile {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: background 120ms ease, transform 80ms ease;
+}
+
+.cc__tile:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.cc__tile svg {
+  font-size: 22px;
+}
+
+.cc__tile span {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.cc__tile.active {
+  background: rgba(10, 132, 255, 0.35);
+  box-shadow: 0 0 10px rgba(10,132,255,0.6);
+}
+
+.cc__tile.active svg {
+  color: #0a84ff;
+}
+
+/* MUSIC */
+.cc__music {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* SLIDERS */
+.cc__slider {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 10px 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cc__slider span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.cc__slider input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 999px;
+}
+
+.cc__slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+
+/* ───────── WIFI PANEL (macOS STYLE) ───────── */
+
+.cc__wifiPanel {
+  background: rgba(60,60,62,0.85);
+  border-radius: 18px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  animation: fadeIn 0.2s ease;
+}
+
+.cc__wifiHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc__wifiStatus {
+  font-size: 12px;
+  color: #0a84ff;
+}
+
+.cc__wifiSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cc__wifiLabel {
+  font-size: 11px;
+  opacity: 0.6;
+  margin-top: 6px;
+}
+
+.cc__wifiItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.cc__wifiItem:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.cc__wifiItem svg {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.cc__wifiItem span {
+  flex: 1;
+}
+
+.cc__wifiItem.active {
+  background: rgba(10,132,255,0.35);
+  box-shadow: inset 0 0 0 1px rgba(10,132,255,0.6);
+}
+
+.cc__wifiFooter {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.cc__wifiFooter:hover {
+  opacity: 1;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ───────── BLUETOOTH PANEL ───────── */
+.cc__bluetoothPanel {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.2s ease;
+}
+
+.cc__bluetoothHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  width: 38px;
+  height: 20px;
+}
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #555;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.2s;
+}
+.switch input:checked + .slider {
+  background: #0a84ff;
+}
+.switch input:checked + .slider::before {
+  transform: translateX(18px);
+}
+
+/* CONNECTED */
+.cc__bluetoothConnected {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+}
+
+.cc__bluetoothConnected span {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* LIST */
+.cc__bluetoothList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cc__bluetoothItem {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.cc__bluetoothItem:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.cc__bluetoothItem span {
+  font-size: 12px;
+}

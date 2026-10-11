@@ -1,0 +1,56 @@
+.settingsSidebar {
+  width: 260px;
+  background: #1c1c1e;
+  border-right: 1px solid #2c2c2e;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.settingsSidebar__search {
+  margin-bottom: 14px;
+}
+
+.settingsSidebar__search input {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2c2c2e;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.settingsSidebar__section {
+  margin-bottom: 16px;
+}
+
+.settingsSidebar__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #eaeaea;
+  font-size: 14px;
+  transition: background 0.15s;
+}
+
+.settingsSidebar__item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.settingsSidebar__item.active {
+  background: #0a84ff;
+  color: white;
+}
+
+.settingsSidebar__item.disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.settingsSidebar__item .icon {
+  width: 20px;
+  text-align: center;
+}

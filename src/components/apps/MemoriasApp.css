@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+.memoriasApp{
+display:flex;
+width:100%;
+height:100%;
+background:#1c1c1c;
+color:white;
+font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* SIDEBAR */
+
+.memoriasSidebar{
+width:220px;
+background:#2b2b2b;
+padding:20px;
+border-right:1px solid rgba(255,255,255,0.06);
+}
+
+.memoriasSidebar h3{
+margin-bottom:20px;
+font-weight:600;
+font-size:18px;
+letter-spacing:.3px;
+}
+
+.memoriasSidebar ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.memoriasSidebar li{
+padding:10px 12px;
+border-radius:6px;
+margin-bottom:8px;
+cursor:pointer;
+font-size:14px;
+font-weight:500;
+transition:background .2s ease;
+}
+
+.memoriasSidebar li:hover{
+background:rgba(255,255,255,0.08);
+}
+
+.memoriasSidebar li.active{
+background:#2f5cff;
+}
+
+/* CONTENT */
+
+.memoriasContent{
+flex:1;
+padding:30px;
+overflow:auto;
+}
+
+.memoriasContent h2{
+margin-bottom:12px;
+font-weight:600;
+font-size:22px;
+letter-spacing:.2px;
+}
+
+/* TEXTO INSTITUCIONAL */
+
+.memoriasText{
+max-width:720px;
+line-height:1.7;
+font-size:15px;
+opacity:.9;
+font-weight:400;
+}
+
+/* GRID DE IMÁGENES */
+
+.memoriasGrid{
+margin-top:25px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.memoriasGrid img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.memoriasGrid img:hover{
+transform:scale(1.03);
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}

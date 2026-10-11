@@ -1,0 +1,54 @@
+.calendarPanel {
+  width: 300px;
+  padding: 8px;
+}
+
+/* Base */
+.react-calendar {
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+/* Header */
+.react-calendar__navigation {
+  margin-bottom: 8px;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.react-calendar__navigation button:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* Days */
+.react-calendar__tile {
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.react-calendar__tile--now {
+  background: rgba(255,255,255,0.18);
+}
+
+.react-calendar__tile--active {
+  background: #0a84ff;
+  color: white;
+}
+
+/* Weekdays */
+.react-calendar__month-view__weekdays {
+  text-transform: capitalize;
+  font-size: 11px;
+  opacity: 0.8;
+}

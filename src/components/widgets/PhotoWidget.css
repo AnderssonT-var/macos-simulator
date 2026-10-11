@@ -1,0 +1,69 @@
+.photoWidget{
+
+  position:absolute;
+  top:60px;
+  left:20px;
+
+  width:420px;
+  height:420px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  background:#000;
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.35);
+
+  backdrop-filter: blur(10px);
+
+}
+
+.photoWidget img{
+
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+}
+/* placeholder */
+.photoWidget__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+/* Animación entrada */
+@keyframes widgetEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Animación imagen */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}

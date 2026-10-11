@@ -1,0 +1,55 @@
+.terminalApp{
+display:flex;
+width:100%;
+height:100%;
+background:#1e1e1e;
+color:white;
+}
+
+.terminalSidebar{
+width:200px;
+padding:20px;
+background:#2a2a2a;
+}
+
+.terminalSidebar h3{
+margin-bottom:20px;
+}
+
+.terminalSidebar ul{
+list-style:none;
+padding:0;
+}
+
+.terminalSidebar li{
+padding:8px;
+margin-bottom:6px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.terminalSidebar li.active{
+background:#3b6df5;
+}
+
+.terminalContent{
+flex:1;
+padding:20px;
+}
+
+.terminalGrid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:20px;
+}
+
+.terminalCard{
+background:#333;
+height:120px;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+}

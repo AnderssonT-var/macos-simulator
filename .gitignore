@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.env
+.env.*
+.rsync-partial/
+u715637801@enfoco.media/
+deploy.sh

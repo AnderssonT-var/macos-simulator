@@ -1,0 +1,46 @@
+html, body, #root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* BASE */
+.desktop {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ÁREA PRINCIPAL */
+.desktop__stage {
+  flex: 1;
+  position: relative;
+}
+
+/* CONTENEDOR DE ICONOS (DERECHA) */
+.desktopIcons{
+
+  position:absolute;
+  inset:0;
+
+  z-index:10;
+
+}
+
+/* VENTANAS */
+.desktop__windows {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* LAS VENTANAS SÍ reciben eventos */
+.window {
+  pointer-events: auto;
+}

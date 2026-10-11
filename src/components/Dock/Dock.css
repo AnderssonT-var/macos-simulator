@@ -1,0 +1,135 @@
+.dock {
+  display: flex;
+  align-items: flex-end;
+
+  position: fixed;
+  left: 50%;
+  bottom: 3%;
+  z-index: 10;
+  transform: translateX(-50%);
+
+  height: 78px;
+  padding: 0.3rem 0.7rem 0;
+  border-radius: 16px;
+
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* ───────── ITEM ───────── */
+.dockItem {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: end center;
+}
+
+/* ───────── DOT ───────── */
+.dockItem__dotLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dock-dot {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.dockItem--open .dock-dot {
+  opacity: 1;
+}
+
+/* ───────── BUTTON ───────── */
+.dockItem .icon {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+/* ───────── ICON IMAGE ───────── */
+.dockItem .icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  transform: translateY(-4px) scale(1);
+  transition: transform 260ms ease;
+}
+
+/* ───────── DESKTOP HOVER ───────── */
+@media (hover: hover) and (pointer: fine) {
+  .dockItem:hover .icon img {
+    transform: translateY(-34px) scale(1.75);
+  }
+
+  .dockItem:hover + .dockItem .icon img,
+  .dockItem:has(+ .dockItem:hover) .icon img {
+    transform: translateY(-18px) scale(1.35);
+  }
+
+  .dock-tooltip {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(10px);
+    padding: 6px 10px;
+    font-size: 12px;
+    background: var(--glass-bg);
+    border-radius: 6px;
+    border: 1px solid var(--glass-border);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 140ms ease, transform 140ms ease;
+  }
+
+  .dockItem:hover .dock-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-40px);
+  }
+}
+
+/* ───────── MOBILE RESPONSIVE ───────── */
+@media (max-width: 768px) {
+  .dock {
+    bottom: 8px;
+    height: 64px;
+    padding: 6px 10px;
+    gap: 6px;
+    overflow-x: auto;
+    max-width: 95vw;
+  }
+
+  .dockItem {
+    width: 54px;
+    height: 54px;
+  }
+
+  .dockItem .icon img {
+    width: 48px;
+    height: 48px;
+    transform: translateY(0) scale(1);
+  }
+
+  .dock-tooltip {
+    display: none;
+  }
+}
